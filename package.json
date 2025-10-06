@@ -1,0 +1,23 @@
+{
+  "name": "tchuu-tchuu_desktop",
+  "version": "1.0.0",
+  "description": "versão desktop do Tchuu-Tchuu",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilherme-JSS/Tchuu-Tchuu_Desktop.git"
+  },
+  "author": "Guilherme José Schutz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guilherme-JSS/Tchuu-Tchuu_Desktop/issues"
+  },
+  "homepage": "https://github.com/Guilherme-JSS/Tchuu-Tchuu_Desktop#readme",
+  "dependencies": {
+    "electron": "^38.2.1"
+  }
+}
