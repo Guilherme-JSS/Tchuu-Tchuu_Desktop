@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/imagens/logos/logo THUU.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/menulateral.css">
+    <link rel="stylesheet" href="../Assets/fot.css">
+    <link rel="stylesheet" href="../Assets/AnimaçãoScroll.css">
+    <link rel="stylesheet" href="../Assets/styledash.css">
+    <script async type="module" src="../javascript/autenticacao.js"></script>
+    <title>Tchuu Tchuu - Dashboard Geral</title>
+
+</head>
+
+<body>
+<body>
+
+
+
+
+    <header class="header">
+        <h2>Dashboard</h2>
+    </header>
+
+    <div id="container">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-icon">☰</div>
+            <br><br>
+            <ul>
+                <li class="item-menu">
+                    <a href="../Public/pagChat.html">
+                        <span class="icon"><i class="acesso-chat"><img src="../Assets/imagens/barras/chat.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Chat </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagGestaoRotas.html">
+                        <span class="icon"><i class="acesso-rotas"><img src="../Assets/imagens/barras/mapa.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Mapas </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagGeralDashboard.html">
+                        <span class="icon"><i class="acesso-dash"><img src="../Assets/imagens/barras/home.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Home </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagMonitora.html">
+                        <span class="icon"><i class="acesso-desemp"><img src="../Assets/imagens/barras/desempenho.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Monitoramento </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagUsuario.html">
+                        <span class="icon"><i class="acesso-user"><img src="../Assets/imagens/barras/user.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Usuario </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section class="informacoeslinha">🏢 CP REGIONAL</section>
+
+        <section class="info-principal">
+            <div class="data">📅 26/03/2025</div>
+
+            <div class="informacoes2">
+                <div class="informacoes2tl">
+                    <!-- Aqui será adicionado o horário de saida e o horário previsto de chegada para o maquinista---->
+                    <a>JVE<br><small>Joinville</small><br>05:55</a>
+                </div>
+
+                <div class="informacoes2c">🚆</div>
+                <div class="informacoes2tr">
+
+                    <a>CVA<br><small>Cidade Várzea</small><br>08:40</a>
+                </div>
+
+            </div>
+
+            <div class="tremimagem">
+                <img src="../Assets/imagens/imagens-de-uso/tremimagem2.png" alt="Imagem de um trem">
+                <img src="../Assets/imagens/imagens-de-uso/tremimagem.png" alt="Imagem do trem">
+                <img src="../Assets/imagens/imagens-de-uso/tremimagem3.jpg" alt="Imagem de outro trem">
+            </div>
+            <p class="trem-detalhes">4488 + 5577<br>Hércilio da Costa</p> <!--nome do Trem e maquinista-->
+        </section>
+
+        <div class="informacoeslinha">
+            <h3>HORÁRIOS</h3>
+        </div>
+
+        <div class="horarios">
+            <ul class="lista-horarios">
+                <li><strong>Domingo:</strong> Sem agendamento</li>
+                <li><strong>Segunda-feira:</strong> 09:00-09:30 | 17:30-18:00</li>
+                <li><strong>Terça-feira:</strong> 09:00-09:30 | 17:30-18:00</li>
+                <li><strong>Quarta-feira:</strong> 09:00-09:30 | 17:30-18:00</li>
+                <li><strong>Quinta-feira:</strong> 09:00-09:30 | 17:30-18:00</li>
+                <li><strong>Sexta-feira:</strong> 09:00-09:30 | 17:30-18:00</li>
+                <li><strong>Sábado:</strong> Sem agendamento</li>
+            </ul>
+        </div>
+
+
+
+        <div class="informacoeslinha">
+            <h3>ALERTAS EM TEMPO REAL</h3>
+        </div>
+
+        <section id="climadash">
+            <!--Futuramente será adicionado uma API de clima aqui-->
+        </section>
+
+        <div class="alerta">
+  <strong>⚠️ Alerta severo</strong>
+  <p>
+    Defesa Civil: Chuva forte se espalhando pela capital paulista com rajadas de vento e risco de alagamento.
+    Mantenha-se em local seguro.
+  </p>
+
+  <button class="btn-notificacoes" onclick="toggleNotificacoes()">Notificações</button>
+
+  <div id="notificacoes" class="notificacoes-conteudo">
+    <p><strong>Número do Trem:</strong> 12345</p>
+    <p><strong>Fabricante:</strong> CAF</p>
+    <p><strong>Data de Cadastro:</strong> 06/10/2025</p>
+  </div>
+</div>
+
+
+        <footer class="fot">
+            <div class="iconf"><a href="pagGestaoRotas.html"><img src="../Assets/imagens/barras/mapa.png" alt=""></a>
+            </div>
+            <div class="iconf"><a href="pagChat.html"><img src="../Assets/imagens/barras/chat.png" alt=""></a></div>
+            <div class="iconf"><a href="pagGeralDashboard.html"><img src="../Assets/imagens/barras/home.png" alt=""></a>
+            </div>
+            <div class="iconf"><a href="pagMonitora.html"><img src="../Assets/imagens/barras/desempenho.png" alt=""></a>
+            </div>
+            <div class="iconf"><a href="pagUsuario.html"><img src="../Assets/imagens/barras/user.png" alt=""></a></div>
+        </footer>
+    </div>
+
+    <script src="../javascript/menu-hamburguer-PC.js"></script>
+    <script src="../javascript/some-hambuer.js"></script>
+    <script src="../javascript/sume-rodape.js"></script>
+    <script src="../javascript/tentativa-deimplementaAPIdeCLima.js"></script>
+    <script type="module" src="javascript/autenticacao.js"></script>
+    <script src="../javascript/notificacaodash.js"></script>
+    <!-- <script src="../javascript/AnimacaoScroll.js"></script> -->
+
+</body>
+
+</html>

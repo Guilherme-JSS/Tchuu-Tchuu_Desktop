@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffffff);
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    margin: 0;
+}
+
+#container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    min-width: 280px;
+    overflow: hidden;
+    margin-top: 120px;
+    padding: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.info-btn {
+    font-size: 30px;
+    border-radius: 5px;
+    border-color: #009688;
+}
+
+.informacoeslinha {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.info-principal {
+    margin: 0;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#climadash {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes2 {
+    background: linear-gradient(to right, #03ddc0, #0d4d46);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 100);
+    flex-wrap: wrap;
+}
+
+.informacoes2c {
+    font-size: 36px;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.tremimagem {
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+}
+
+.tremimagem img {
+    margin: 0.5%;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 32.5%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.tremimagem img:hover {
+    transform: scale(1.05);
+}
+
+.trem-detalhes {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #777;
+}
+
+#entra-alert {
+    color: #03ddc0;
+
+}
+
+
+.horarios,
+.alertas {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.lista-horarios {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.lista-horarios li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #555;
+}
+
+.alertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alerta {
+    background: #ffb5c0;
+    padding: 15px;
+    border-left: 5px solid #d32f2f;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.alerta h4 {
+    margin-bottom: 8px;
+    color: #d32f2f;
+}
+
+.alerta p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #585858;
+}
+
+.btn-notificacoes {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-notificacoes:hover {
+  background-color: #b71c1c;
+}
+
+.notificacoes-conteudo {
+  background-color: #d32f2f;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 16px;
+  display: none;
+  animation: expandir 0.3s ease-out;
+}
+
+.notificacoes-conteudo p {
+  color: white;
+
+}
+
+@keyframes expandir {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+
+
+@media (min-width: 901px) {
+    body {
+        justify-content: center;
+        align-items: start;
+        display: flex;
+        margin: 0;
+
+    }
+
+    #container {
+        margin: 0;
+        margin-top: 120px;
+        width: 75%;
+        padding: 50px;
+    }
+}

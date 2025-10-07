@@ -1,0 +1,325 @@
+body {
+    margin: 10px 30px;
+    padding: 30px;
+    background-color: antiquewhite;
+    /* Elias celestial */
+}
+
+
+
+
+
+
+#container {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+
+
+}
+
+#cabe {
+    text-align: center;
+    background-color: rgb(253, 231, 202);
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    animation: surge 2s ease-in-out;
+}
+
+#Login {
+    align-items: center;
+    text-align: center;
+    margin: 100px 50px;
+    border-radius: 20px;
+    height: 90%;
+    max-height: 900px;
+    background-color: whitesmoke;
+
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+#Login h2 {
+    font-family: sans-serif;
+}
+
+
+#Registro {
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 70%;
+    min-height: 900px;
+    max-height: 1080px;
+    height: 100%;
+    gap: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: white;
+
+}
+
+#Voltar {
+    background-color: whitesmoke;
+    background: linear-gradient(to right, #00bfa5, #009688);
+    color: white;
+    border: none;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    min-width: 150px;
+
+}
+
+#Voltar:hover {
+    transform: scale(1.3);
+    background: linear-gradient(to right, #4FC1E9, #2575fc);
+    color: #12181C;
+}
+
+#Voltar p {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    margin: 8px;
+    border: none;
+}
+
+.envia {
+    position: relative;
+    color: white;
+    border: none;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    min-width: 150px;
+    display: inline-block;
+    width: 20%;
+    background: linear-gradient(to right, #00bfa5, #2a5c57);
+    transition: transform 0.4s ease, color 0.4s ease;
+    z-index: 1;
+}
+
+.envia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #4FC1E9, #408cca);
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+
+.envia:hover::before {
+    opacity: 1;
+}
+
+.envia span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+}
+
+.envia:hover {
+    transform: scale(1.1);
+    color: #12181C;
+}
+
+
+input, select, textarea  {
+    width: 40%;
+    text-align: center;
+    border-radius: 2px;
+    border: 0;
+    padding: 8px;
+}
+
+label {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #383838;
+}
+
+
+.link {
+    transition: 2s;
+}
+
+.link :hover {
+    color: #2575fc;
+
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+
+form p {
+    text-align: center;
+    color: darkgrey;
+}
+
+
+.form-group {
+    border-radius: 10px;
+    margin-left: 10px;
+    gap: 30px;
+    padding: 10px;
+}
+
+.oplog {
+    justify-content: center;
+    display: flex;
+}
+
+.oplog img {
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+a {
+    font-family: sans-serif;
+    text-align: center;
+    color: #222;
+    font-weight: 500;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#container,
+#Registro {
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes vem-de-lado {
+    from {
+        opacity: 0;
+        transform: translatex(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+fieldset,
+.form-group {
+    animation: vem-de-lado 2s ease-in-out;
+}
+
+#check {
+    padding: 0px;
+    width: 50%;
+    accent-color: #438082;
+    text-align: left;
+    align-items: first baseline;
+}
+
+@keyframes envia {
+    from {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes surge {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+nav {
+    text-align: center;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+hr {
+    max-width: 900px;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    #Registro {
+        width: 100%;
+        margin: 0;
+        padding: 1px;
+    }
+
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #login {
+        border-radius: 20px;
+        height: 90%;
+        max-height: 900px;
+        margin: 8%;
+        padding: 0;
+        background-color: whitesmoke;
+    }
+
+    #Login {}
+
+    body {
+        margin: 0;
+        padding: 1px;
+    }
+
+    #container {
+        margin: 0;
+        width: 100%;
+    }
+}

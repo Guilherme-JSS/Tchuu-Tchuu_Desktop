@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/stylesenha.css">
+    <link rel="shortcut icon" href="../Assets/imagens/logos/logo THUU.png" type="image/x-icon">
+    <title>Tchuu-Tchuu esqueci minha senha</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="cabe">
+            <h1 id="titu">Alterar Senha</h1>
+        </header>
+
+        <main>
+            <section>
+                <form action="" id="senha" onsubmit="return ValidaSenhaRecuperacao(event)">
+                    <div>
+                        <h2>Digite Email e Número de Funcionário</h2>
+                        <br>
+
+                        <fieldset>
+                            <label for="email">Email</label>
+                            <br>
+                            <input type="email" id="email">
+                        </fieldset>
+
+
+                        <br>
+
+                        <fieldset>
+                            <label for="numfun">Número de Funcionário</label>
+                            <br>
+                            <input type="number" id="NumFun">
+                        </fieldset>
+
+                    </div>
+
+                    <div id="passou">
+                        <!--InnerHTML que vai aparecer-->
+                    </div>
+                    <br>
+
+
+                    <div class="center">
+                        <button type="submit" class="envia">
+                            Enviar
+                        </button>
+
+                    </div>
+                    <br>
+
+
+
+                    <div id="senhaVeio">
+
+                        <br>
+
+                        <fieldset>
+                            <label for="">Digite sua nova Senha</label>
+                            <br>
+                            <input type="password" id="senhaNova">
+                        </fieldset>
+
+
+
+                        <br>
+
+                        <button class="envia" type="button" onclick="SalvarNovaSenha()">
+                            Salvar senha
+                        </button>
+
+                    </div>
+
+
+
+                    <hr>
+
+                    <!--                
+                    <div class="oplog">
+                        <img src="../Assets/imagens/imagens-de-uso/Googleimg.png" alt="">
+                        <img src="../Assets/imagens/imagens-de-uso/linkdin.png" alt="">
+                    </div>
+                     -->
+
+                    <br>
+                    <br><br>
+                    <div id="voltap">
+                        <a href="../index.html" id="Voltar">← Voltar</a>
+                    </div>
+
+                </form>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+
+        </footer>
+    </div>
+
+
+</body>
+
+<script src="../javascript/validaEmailSenhaRecupera.js"></script>
+
+</html>

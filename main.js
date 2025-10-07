@@ -2,11 +2,14 @@ const { app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 1600,
+        height: 1020,
+        icon: './FRONT-END/Assets/imagens/logos/logo THUU.png',
+        autoHideMenuBar: true
     })
 
-    win.loadFile('index.html');
+    win.loadFile('./FRONT-END/index.html');
+    
 }
 
 app.whenReady().then(() => {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/imagens/logos/logo THUU.png" type="image/x-icon">
+    <link rel="stylesheet" href="..//Assets/Desempenho.css">
+    <link rel="stylesheet" href="../Assets/fot.css">
+    <link rel="stylesheet" href="../Assets/menulateral.css">
+    <link rel="stylesheet" href="../Assets/AnimaçãoScroll.css">
+    <title>Tchuu Tchuu - Monitoramento </title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h2>Monitoramento dos Trens</h2>
+        <div class="header-icons">
+        </div>
+    </header>
+
+    <div id="container">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-icon">☰</div>
+            <br><br>
+            <ul>
+                <li class="item-menu">
+                    <a href="../Public/pagChat.html">
+                        <span class="icon"><i class="acesso-chat"><img src="../Assets/imagens/barras/chat.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Chat </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagGestaoRotas.html">
+                        <span class="icon"><i class="acesso-rotas"><img src="../Assets/imagens/barras/mapa.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Mapas </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagGeralDashboard.html">
+                        <span class="icon"><i class="acesso-dash"><img src="../Assets/imagens/barras/home.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Home </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagMonitora.html">
+                        <span class="icon"><i class="acesso-desemp"><img src="../Assets/imagens/barras/desempenho.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Monitoramento </span>
+                    </a>
+                </li>
+                <br>
+                <li class="item-menu">
+                    <a href="../Public/pagUsuario.html">
+                        <span class="icon"><i class="acesso-user"><img src="../Assets/imagens/barras/user.png"
+                                    alt=""></i></span>
+                        <span class="txt-link"> Usuario </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <section>
+
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Informações Gerais</h2>
+                    </div>
+                </div>
+
+                <!-- Carrossel de Gráficos - INÍCIO -->
+                <div
+                    style="position: relative; width: 100%; max-width: 800px; margin: 20px auto; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <button onclick="moverSlideGraficos(-1)"
+                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: #333; color: white; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">‹</button>
+
+                    <div id="slides-graficos" style="display: flex; transition: transform 0.4s ease-in-out;">
+                        <div style="min-width: 100%; padding: 15px;"><canvas id="chart1"></canvas></div>
+                        <div style="min-width: 100%; padding: 15px;"><canvas id="chart2"></canvas></div>
+                        <div style="min-width: 100%; padding: 15px;"><canvas id="chart3"></canvas></div>
+                    </div>
+
+                    <button onclick="moverSlideGraficos(1)"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: #333; color: white; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">›</button>
+                </div>
+
+
+
+
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Avaliação de Desempenho</h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label for="coefficient">Coeficiente Eficiência da Ferrovia</label>
+                    <input type="text" id="coefficient" placeholder="Valor">
+                </div>
+                <div class="chart-container">
+                    <label for="average_stop_time">Tempo Média Parada</label>
+                    <input type="text" id="average_stop_time" placeholder="Valor">
+                </div>
+                <br>
+
+                <div class="chart-container">
+                    <label for="extension">Extensão</label>
+                    <input type="text" id="extension" placeholder="Valor">
+                </div>
+
+
+                <div class="chart-container">
+                    <label for="initial_final_platform">Pátio Inicial e Final</label>
+                    <input type="text" id="initial_final_platform" placeholder="Valor">
+                </div>
+            </section>
+
+            <section>
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Trens em Manutenção</h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label for="">Avariguar Situação dos Trens</label>
+
+                    <br>
+                    <div>
+                        <a class="botao" href="pagManutencao.html">Acesso a Manutenção</a>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section>
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Cadastrar novos Trens a frota</h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label for="">Acesse Caso um novo trem tenha sido adquirido e seja necessário adicionar seus
+                        dados</label>
+
+                    <br>
+                    <div>
+                        <a class="botao" href="pagregistraTREM.html">Adicionar Trem</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Monitoramento de Frota</h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label>Analise as informações sobre cada trem pertencente a frota do TCHUU-TCHUU</label>
+
+                    <br>
+                    <div>
+                        <a class="botao" href="pagFrota.html">Acessar Trens</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Cadastrar Sensores</h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label for="">Acesse para Adicionar novo tipo de Sensor</label>
+
+                    <br>
+                    <div>
+                        <a class="botao" href="cadastrarSensor.html">Adicionar Sensor</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="informacoes2">
+                    <div class="informacoes2tl">
+                        <h2>Mantar Trem para manutenção </h2>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <label for="">Está com Problemas no Trem?</label>
+
+                    <br>
+                    <div>
+                        <a class="botao" href="enviaTremManu.html">Enviar Trem para Manutenção</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+        </main>
+
+        <footer class="fot">
+            <div><a href="pagGestaoRotas.html"><img src="../Assets/imagens/barras/mapa.png" alt=""></a></div>
+            <div><a href="pagChat.html"><img src="../Assets/imagens/barras/chat.png" alt=""></a></div>
+            <div><a href="pagGeralDashboard.html"><img src="../Assets/imagens/barras/home.png" alt=""></a></div>
+            <div><a href="pagMonitora.html"><img src="../Assets/imagens/barras/desempenho.png" alt=""></a></div>
+            <div><a href="pagUsuario.html"><img src="../Assets/imagens/barras/user.png" alt=""></a></div>
+        </footer>
+
+
+    </div>
+
+
+
+
+
+    <script src="../javascript/menu-hamburguer-PC.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../javascript/some-hambuer.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/sume-rodape.js"></script>
+    <script type="module" src="../javascript/autenticacao.js"></script>
+    <script src="../javascript/GraficoDesempenho.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+<script src="../javascript/Monitora.js"> </script>
+
+</html>
