@@ -4,7 +4,7 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 1600,
         height: 1020,
-        icon: './FRONT-END/Assets/imagens/logos/logo THUU.png',
+        icon: 'logo-THUU.ico',
         autoHideMenuBar: true
     })
 

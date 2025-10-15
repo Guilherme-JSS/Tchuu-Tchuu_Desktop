@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "versão desktop do Tchuu-Tchuu",
   "main": "main.js",
+  "author": "Guilherme José Schutz da Silva",  
   "scripts": {
     "start": "electron .",
     "make": "electron-forge make",
@@ -19,24 +20,21 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "../FRONT-END/Assets/imagens/logos/logo THUU.png"
+        "icon": "logo-THUU.ico"
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "TchuuTchuuDesktop",
-            "setupIcon": "build/icon.ico",
-            "loadingGif": "build/installing.gif",
-            "iconUrl": "https://seusite.com/icon.ico",
-            "executableName": "TchuuTchuu"
+            "setupIcon": "logo-THUU.ico",
+            "executableName": "TchuuTchuu",
+            "authors": "Guilherme José Schutz da Silva"   
           }
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "win32"
-          ]
+          "platforms": ["win32"]
         }
       ]
     }
