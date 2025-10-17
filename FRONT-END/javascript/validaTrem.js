@@ -1,18 +1,21 @@
-let botao 
+const botao_registra = document.getElementById("botao_registra");
 
-botao.addEvenListner()
 
 
 async function validaRegistroTrem(event) {
     event.preventDefault();
 
     const nomeTrem = document.getElementById('nomeTrem').value.trim();
+    // let numero_de_Trem = Math.floor(Math.random() * 999999999999) + 1000;
+    // let numero_de_Trem = Math.floor(Math.random() * 2147483647) + 1;
+    // let numero_de_Trem = Math.floor(Math.random() * 999999) + 1;
     const numero_de_Trem = crypto.randomUUID().substring(0, 20);
     const fabricante = document.getElementById('fabricante').value.trim();
     const dataRegistro = document.getElementById('DataRe').value.trim();
     const cpfUser = document.getElementById('RegistroUser').value.trim();
-    const nomeUser = document.getElementById('NomeUser').value.trim();
-/*    
+
+
+    /*    
     const nomeTrem = document.getElementById('nomeTrem').value.trim();
     const nomeTrem = document.getElementById('nomeTrem').value.trim();
     const nomeTrem = document.getElementById('nomeTrem').value.trim();
@@ -28,18 +31,19 @@ async function validaRegistroTrem(event) {
     const cpfUser = document.getElementById('RegistroUser').value.trim();
     const cpfUser = document.getElementById('RegistroUser').value.trim();
     const cpfUser = document.getElementById('RegistroUser').value.trim();
-*/
-    if (!nomeTrem || !numero_de_Trem || !fabricante || !dataRegistro || !cpfUser  || !nomeUser) {
+    */
+    if (!nomeTrem || !numero_de_Trem || !fabricante || !dataRegistro || !cpfUser) {
         alert("Todos os dados são necessários. PREENCHA OS CAMPOS");
         return false;
     }
 
-    if (isNaN(numero_de_Trem) || Number(numero_de_Trem) <= 0) {
+
+    /*    if (isNaN(numero_de_Trem) || Number(numero_de_Trem) <= 0) {
         alert('O campo deve ser preenchido com números acima de 0');
         return false;
-    }
+        } */
 
-    if (!/^\d{11}$/.test(cpfUser)) { //Quem Foi que inventou isso MEU DEUS.
+    if (!/^\d{11}$/.test(cpfUser)) {
         alert("CPF inválido");
         return false;
     }
@@ -50,7 +54,6 @@ async function validaRegistroTrem(event) {
         return false;
     }
 
-    // if(nomeUser  ){}
 
     const ano = parseInt(data_parte[0], 10);
     const mes = parseInt(data_parte[1], 10);
@@ -61,6 +64,7 @@ async function validaRegistroTrem(event) {
         return false;
     }
 
+
     if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 1900) {
         alert("Data inválida");
         return false;
@@ -69,25 +73,20 @@ async function validaRegistroTrem(event) {
 
 
 
-    //DAQUI PARA BAIXO É BRAIAN QUERENDO INVENTAR MODA, MAS SE DER CERTO JÁ PODEREMOS PASSAR O TREM INTEIRO PARA O BANCO DE DADOS
 
     class Trem {
-        constructor(nomeTrem, numero_de_Trem, fabricante, cpfUser, dataRegistro, nomeUser) {
+        constructor(nomeTrem, numero_de_Trem, fabricante, cpfUser, dataRegistro) {
             this.nomeTrem = nomeTrem;
             this.numero = numero_de_Trem;
             this.fabricante = fabricante;
             this.cpfUser = cpfUser;
             this.dataRegistro = dataRegistro;
-            this.NomeUser = nomeUser;
         }
-
-
     }
 
 
     const novoTrem = new Trem(nomeTrem, numero_de_Trem, fabricante, cpfUser, dataRegistro);
 
-    //A APARENTE INVENÇÃO DE MODA PARECE TER DADO CERTO AGORA É SÓ ESPERAR
 
     try {
 
@@ -99,20 +98,46 @@ async function validaRegistroTrem(event) {
             body: JSON.stringify(novoTrem)
         });
 
-        
 
+        alert("Trem Registrado com sucesso");
+        window.location.href = '../Public/pagMonitora.html';
 
-
-
-    alert("Trem Registrado com sucesso");
-    window.location.href = '../Public/pagMonitora.html';
-
-    return true;
-}
+        return true;
+    }
     catch {
-    console.log("babuga");
-    alert("ERRO");
-}
+        console.log("babuga");
+        alert("ERRO");
+    }
 
 
 }
+
+botao_registra.addEventListener("click", validaRegistroTrem);
+
+
+
+
+
+
+
+
+
+
+
+/*
+const nomeTrem = document.getElementById('nomeTrem').value.trim();
+const nomeTrem = document.getElementById('nomeTrem').value.trim();
+const nomeTrem = document.getElementById('nomeTrem').value.trim();
+const numero_de_Trem = crypto.randomUUID().substring(0, 20);
+const numero_de_Trem = crypto.randomUUID().substring(0, 20);
+const numero_de_Trem = crypto.randomUUID().substring(0, 20);
+const fabricante = document.getElementById('fabricante').value.trim();
+const fabricante = document.getElementById('fabricante').value.trim();
+const fabricante = document.getElementById('fabricante').value.trim();
+const dataRegistro = document.getElementById('DataRe').value.trim();
+const dataRegistro = document.getElementById('DataRe').value.trim();
+const dataRegistro = document.getElementById('DataRe').value.trim();
+const cpfUser = document.getElementById('RegistroUser').value.trim();
+const cpfUser = document.getElementById('RegistroUser').value.trim();
+const cpfUser = document.getElementById('RegistroUser').value.trim();
+*/

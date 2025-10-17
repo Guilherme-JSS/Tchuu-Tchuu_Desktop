@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- <script type="module" src="../javascript/protegerPAG.js"></script> -->
+    <script type="module" src="../javascript/protegerPAG.js"></script>
 
     <header class="header">
         <h2>Página do Usuário</h2>
@@ -79,8 +79,8 @@
 
             <div class="container-dado">
                 <div class="flex informacoes2">
-                    <img src="../Assets/imagens/imagens-de-uso/fotodeperfil.png" alt="">
-                    <h3>Usuário</h3>
+                    <!-- <img src="../Assets/imagens/imagens-de-uso/fotodeperfil.png" alt=""> -->
+                    <h3 id="nomeUser"></h3>
                 </div>
             </div>
 
@@ -93,56 +93,88 @@
 
 
                     <div class="conteudo-expansivel">
+
                         <ul>
-                            <li>Nome :</li>
-                            <li>Data de Nascimento: </li>
-                            <li>Email: </li>
-                            <li>Telefone: </li>
-                            <li>Registro de Funcionário: </li>
-                            <li>CPF: </li>
+                            <li class="item-flex">Nome : <p id="nome_mostrar"></p>
+                            </li>
+                            <br>
+
+                            <li class="item-flex">Data de Nascimento: <p id="data_nasc_mostrar"></p>
+                            </li>
+                            <br>
+
+                            <li class="item-flex">Email: <p id="email_mostrar"></p>
+                            </li>
+
+                            <br>
+
+                            <li class="item-flex">CPF: <p id="cpf_mostrar"></p>
+                            </li>
                         </ul>
+
+                        <br>
+
+                        <button id="Alterar">Alterar </button>
                     </div>
                 </div>
 
 
 
 
+                <section id="alteracao" style="display: none;">
 
-                <div class="Alterar">
-                    <button id="Alterar"></button>
-                </div>
+                    <h2>Altere a senha e o email conforme desejar</h2>
 
-<!--                 <div id="alteracao">
-
-                    <form action="alteracao">
+                    <form>
 
                         <div>
                             <label for="">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-
-                        <div>
-                            <label for="">CEP</label>
-                            <input type="number" name="Cep" id="Cep">
+                            <br>
+                            <input type="email" name="email" id="email_novo">
                         </div>
 
                         <div>
                             <label for="">Senha</label>
-                            <input type="password" id="senha" name="senha">
+                            <br>
+                            <input type="password" id="senha" name="senha_novo">
                         </div>
 
-                        <div>
-                            <label for="">Telefone</label>
-                            <input type="number" id="telefone" name="telefone">
-                        </div>
+
+                        <br><br>
+                        <button id="botaoAltera" type="submit">Alterar </button>
 
                     </form>
 
-                </div> -->
+                </section>
 
-                <div class="delete">
-                    <a href="">DELETAR</a>
-                </div>
+                <br>
+                <br>
+
+
+                <!-- <div id="delete"> -->
+                <button id="delete" type="submit">DELETAR</button>
+                <!-- </div> -->
+
+                <section id="confirmar_deletacao" style="display: none;">
+                    <h2>Você têm certeza que quer deletar sua conta no Tchuu-Tchuu?</h2>
+                    <h4>insira senha e email</h4>
+
+                    <form>
+                        <div>
+                            <label>Senha</label>
+                            <br>
+                            <input type="password">
+                        </div>
+                        <div>
+                            <label>CPF</label>
+                            <br>
+                            <input type="number" id="cpf_confirmacao">
+                        </div>
+                        <br><br>
+                        <button type="submit" id="hyper_confirmar">Deletar Definitivamente</button>
+                    </form>
+
+                </section>
 
 
 
@@ -170,9 +202,10 @@
     <script src="../javascript/menu-hamburguer-PC.js"></script>
     <script src="../javascript/some-hambuer.js"></script>
     <script src="../javascript/some-hambuer.js"></script>
-    <script src="../javascript/alteraruser.js"></script>
+    <script src="../javascript/dadosUser.js"></script>
+    <script src="../javascript/deletar_validado.js"></script>
     <script src="../javascript/containerdemanutenção.js"></script>
-
+    <script src="../javascript/AlterarDadosUsuario.js"></script>
 
 </body>
 
