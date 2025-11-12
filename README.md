@@ -26,7 +26,6 @@ A versão desktop serve como **cliente local** que se comunica diretamente com o
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width="30" style="background-color:#222; padding:4px; border-radius:6px;"/> **Express**  
 - <img src="https://raw.githubusercontent.com/websockets/ws/master/doc/ws-logo.svg" alt="ws" width="30"/> **ws (WebSocket)** — comunicação em tempo real entre clientes e servidor.  
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" width="35"/> **NPM** — gerenciamento de dependências do Node.js.  
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="bcrypt" width="30"/> **bcrypt.js** — criptografia de senhas no servidor.  
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="30"/> **PostgreSQL** — banco de dados relacional via [Neon.tech](https://neon.tech).
 
 ---
